@@ -1,7 +1,7 @@
-#ifndef DENSITY_ARRAY_H
-#define DENSITY_ARRAY_H
+#ifndef SPARSE_ARRAY_H
+#define SPARSE_ARRAY_H
 
-class DensityArray {
+class SparseArray {
     struct Item {
         int pos;
         int value;
@@ -14,14 +14,14 @@ class DensityArray {
     struct Item **lastModifiedItemPtr;
 
     // forbid copy and assignment
-    DensityArray(const DensityArray& other);
-    void operator=(const DensityArray& other);
+    SparseArray(const SparseArray& other);
+    void operator=(const SparseArray& other);
 
     void optimizeLastModifiedItemIfDefault();
 
 public:
-    DensityArray();
-    ~DensityArray();
+    SparseArray();
+    ~SparseArray();
     int& operator[](int idx);
     int operator[](int idx) const;
 };

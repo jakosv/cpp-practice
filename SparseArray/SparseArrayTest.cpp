@@ -1,16 +1,17 @@
 #include <iostream>
 
-#include "DensityArray.h"
+#include "SparseArray.h"
 
 using namespace std;
 
-void print_const(const DensityArray &arr) {
+void print_const(const SparseArray &arr) {
+    cout << "print_const:\n";
     cout << arr[1] << " " << arr[3] << " " << arr[5] << endl;
     arr[30];
 }
 
 int main() {
-    DensityArray arr;
+    SparseArray arr;
 
     cout << arr[1] << " " << arr[3] << " " << arr[5] << endl;
 
